@@ -4,40 +4,23 @@
 ---
 
 ## **Introduction**
-This project compares the performance of **Facebook Ads** and **Google AdWords** using a real A/B testing dataset. The analysis quantifies which platform drives better **clicks, conversions, and cost-efficiency**, enabling data-driven budget allocation decisions for marketing teams.
+This project compares the performance of **Facebook Ads** and **Google AdWords** using a real-world A/B testing dataset.  
+The goal is to identify which platform delivers better **clicks**, **conversions**, and **cost-efficiency**, helping marketing teams make informed budget allocation decisions.
 
 **Key highlights of the project:**  
-- Detailed **Exploratory Data Analysis (EDA)** to uncover platform-wise trends and delay drivers.  
-- **Feature engineering** to compute derived metrics such as CTR, CPC, Conversion Rate, and CPA.  
-- **Hypothesis testing** (t-tests and proportion tests) to evaluate statistical significance of observed differences.  
-- **Regression analysis** to identify factors influencing conversions and cost metrics.  
-- Performance evaluation using **CTR, Conversion Rate, Avg CPC, and CPA**.
+- Performed **Exploratory Data Analysis (EDA)** to compare ad performance across platforms.  
+- Computed derived metrics: **CTR (Click-Through Rate)**, **CPC (Cost per Click)**, **Conversion Rate**, and **CPA (Cost per Acquisition)**.  
+- Conducted **hypothesis testing** to check for significant differences in performance metrics.  
+- Visualized campaign efficiency and engagement trends using Python visualization libraries.  
+- Interpreted key insights to recommend the best-performing advertising platform.
 
-**SEO Keywords:** facebook vs adwords, a/b testing, marketing analytics, conversion rate optimization, CTR analysis, CPA evaluation, hypothesis testing, regression analysis
-
-
----
-
-## **Live App**
-No live web app is included for this project. The analysis and results are available in the Jupyter Notebook: `A_B_Tesing_Marketing_Campaign_Analysis.ipynb`
+**SEO Keywords:** A/B testing, Facebook Ads, AdWords, marketing analytics, CTR, conversion rate, CPA, cost analysis, digital marketing optimization.
 
 ---
 
-## **Visual Representations**
-
-### **1. Click-Through Rate (CTR) by Platform**
-![CTR by Platform](Images/ctr_by_platform.png)
-
-### **2. Conversion Count by Platform**
-![Conversion Count by Platform](Images/conversions_by_platform.png)
-
-### **3. Spend vs Conversions**
-![Spend vs Conversions](Images/spend_vs_conversions.png)
-
-### **4. Time-based Trend of Clicks and Conversions**
-![Trend of Clicks and Conversions](Images/trends_clicks_conversions.png)
-
-> Note: Save the generated plots from the notebook into the `Images/` folder with the exact filenames above if you want them displayed on GitHub.
+## **Complete Analysis:**
+All analysis, visualizations, and results can be explored in the Jupyter Notebook:  
+`A_B_Tesing_Marketing_Campaign_Analysis.ipynb`
 
 ---
 
@@ -55,11 +38,11 @@ pip install -r requirements.txt
 ```
 
 3. **Open the Notebook**
-* Open `A_B_Tesing_Marketing_Campaign_Analysis.ipynb` in [Google Colab](https://colab.research.google.com/) or locally in Jupyter Notebook.  
-* Ensure the dataset file `A_B_testing_dataset.csv` is in the project root (same folder as the notebook).
+* Launch `A_B_Tesing_Marketing_Campaign_Analysis.ipynb` in [Google Colab](https://colab.research.google.com/) or Jupyter Notebook.  
+* Ensure the dataset `A_B_testing_dataset_balanced.csv` is in the same directory as the notebook.
 
 4. **Run the Notebook**
-* Execute all cells to reproduce EDA, metric calculations, hypothesis tests, and regression analysis.
+* Execute all cells to perform EDA, compute KPIs, conduct hypothesis tests, and view insights.
 
 ---
 
@@ -68,43 +51,42 @@ pip install -r requirements.txt
 The following platform-level metrics were computed from the dataset:
 
 | Metric | Facebook | AdWords | Notes |
-|:-------|:--------:|:-------:|:------|
-| Impressions | 2,152,031 | 4,771,438 | Total ad views across dataset |
-| Clicks | 44,196 | 60,128 | Total clicks recorded |
-| Conversions | 11,975 | 5,933 | Completed conversions |
-| CTR | 0.0205 | 0.0126 | Clicks / Impressions |
-| Avg CPC | ₹3.5437 | ₹2.0747 | Weighted avg cost-per-click |
-| Conversion Rate (conv/click) | 0.271 | 0.0987 | Fraction of clicks that converted |
-| CPA | ₹13.08 | ₹21.03 | Avg cost per acquisition |
+|:-------|:---------:|:--------:|:------|
+| Impressions | 2,952,716 | 4,805,139 | Total ad views |
+| Clicks | 44,125 | 66,810 | Total clicks recorded |
+| Conversions | 10,712 | 7,681 | Completed conversions |
+| CTR | 0.0149 | 0.0139 | Clicks / Impressions |
+| Avg CPC | ₹3.35 | ₹3.00 | Weighted average cost-per-click |
+| Conversion Rate (conv/click) | 0.2428 | 0.1150 | Fraction of clicks that converted |
+| CPA | ₹13.78 | ₹26.09 | Average cost per acquisition |
 
-**Interpretation & Recommendation:**  
-- **Facebook** demonstrates a higher **CTR** and a substantially higher **conversion rate** (≈0.271) compared to AdWords (≈0.0987).  
-- **Facebook also delivers a lower CPA (₹13.08) versus AdWords (₹21.03).**  
-- Based on these metrics, **Facebook** is the recommended platform for conversion-focused ad spend in this dataset, while AdWords can be leveraged for broader reach depending on campaign goals.  
-- Statistical tests performed in the notebook (t-tests / proportion tests) support the significance of these differences — consult the notebook for p-values and test details.
+### **Interpretation & Recommendation**
+- **Facebook** shows a slightly higher **CTR (1.49%)** and a significantly higher **Conversion Rate (24.3%)** than **AdWords (11.5%)**.  
+- **Facebook’s CPA (₹13.78)** is nearly **half** of **AdWords (₹26.09)**, making it much more cost-efficient.  
+- Based on these results, **Facebook** is the recommended platform for **conversion-focused** campaigns.  
+- **AdWords** may still be effective for broader reach or awareness-based campaigns.  
+- Statistical hypothesis testing (t-tests and proportion tests) confirmed that these differences are **statistically significant**.
 
 ---
 
 ## **Known Issues**
-
-* **External signals missing:** Weather, competitor activity, and precise audience overlap are not included and could affect attribution.  
-* **Revenue not available:** The dataset lacks explicit revenue per conversion, so ROI calculations are limited; recommendations rely on CPA and conversion efficiency.  
-* **Causal limits:** Observational A/B allocation and potential confounders mean causal inference should be drawn carefully.
+- **Revenue data** is not available; ROI analysis is inferred via CPA and conversion rate.  
+- **External factors** like ad creatives, demographics, and time-of-day effects are not modeled.  
+- **Further optimization** could include segmentation by audience or region to refine platform strategy.
 
 ---
 
 ## **Contributing**
-
 Contributions are welcome!
 
-* Open issues for bugs, data quality problems, or suggested improvements.  
-* Pull requests appreciated for adding segmentation analysis, revenue modeling, or additional visualizations.  
-* Please ensure reproducibility and include updated `requirements.txt` entries for new libraries.
+- Report issues or suggest improvements through the **Issues** tab.  
+- Submit pull requests for adding new visualizations, analyses, or metrics.  
+- Please ensure that added code is well-documented and reproducible.
 
-> Let’s refine this analysis together to help marketers make better budget-allocation decisions!
+> Let’s work together to deepen data-driven marketing insights and improve decision-making!
 
 ---
 
 ## **License**
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
