@@ -20,7 +20,8 @@ The goal is to identify which platform delivers better **clicks**, **conversions
 
 ## **Complete Analysis:**
 All analysis, visualizations, and results can be explored in the Jupyter Notebook:  
-`A_B_Testing_Marketing_Campaign_Analysis.ipynb`[A_B_Testing_Marketing_Campaign_Analysis.ipynb]
+[A_B_Testing_Marketing_Campaign_Analysis.ipynb](A_B_Testing_Marketing_Campaign_Analysis.ipynb)
+
 
 ---
 
@@ -66,6 +67,8 @@ The following platform-level metrics were computed from the dataset:
 - Based on these results, **Facebook** is the recommended platform for **conversion-focused** campaigns.  
 - **AdWords** may still be effective for broader reach or awareness-based campaigns.  
 - Statistical hypothesis testing (t-tests and proportion tests) confirmed that these differences are **statistically significant**.
+
+Complete summary in 
 
 ---
 
